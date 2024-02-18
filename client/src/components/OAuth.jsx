@@ -21,6 +21,7 @@ export default function OAuth() {
         body: JSON.stringify({ name: result.user.displayName, email: result.user.email, photo: result.user.photoURL})
       });
       const data = res.json();
+      console.log(data)
       dispatch(signInSuccess(data));
       navigate('/')
     } catch (error) {
